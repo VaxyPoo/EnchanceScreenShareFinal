@@ -1,12 +1,12 @@
 /**
- * @name EnhanceScreenshare
+ * @name EnhanceScreenShare
  * @description Sets screenshare quality to 1080p and 60 FPS.
  * @version 1.0.0
  */
 
 const config = {
     info: {
-        name: "EnhanceScreenshare",
+        name: "EnhanceScreenShare",
         authors: [
             {
                 name: "YourName",
@@ -19,7 +19,7 @@ const config = {
     }
 };
 
-module.exports = class EnhanceScreenshare {
+module.exports = class EnhanceScreenShare {
     constructor() {
         this.settings = {};
     }
@@ -36,7 +36,7 @@ module.exports = class EnhanceScreenshare {
         const originalSetVideoQuality = WebRTC.prototype.setVideoQuality;
 
         WebRTC.prototype.setVideoQuality = function (videoQuality) {
-            console.log("EnhanceScreenshare: Overriding video quality settings");
+            console.log("EnhanceScreenShare: Overriding video quality settings");
 
             videoQuality.width = 1920;
             videoQuality.height = 1080;
